@@ -1,0 +1,31 @@
+header{
+    padding: 20px;
+    background-color: tomato;
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    background-color: aqua;
+}
+
+.cancel{
+    color:red;
+    font-size: 20px;
+    cursor: pointer;
+}
+dialog{
+    border: 1px dotted #333;
+    border-radius: 10px;
+    top: calc(-60% - 100px);
+    
+}
+dialog > div{
+    width: 400px;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+dialog::backdrop{
+    background-color: rgba(30,5, 42,0.5);
+}
