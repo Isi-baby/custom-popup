@@ -29,3 +29,12 @@ const confirmOk = () => {
     output.textContent = `
     Congratulations you have been redirected to the main page`
 }
+
+const customPrompt = () => {
+    output.innerHTML = `
+        <p>${'Enter your age'} </p>
+        <input type= text name=prompt>
+        <button onclick="cancelPopup()"> Cancel </button>
+        <button onclick="confirmOk()"> Ok </button>`
+     dialog.showModal()
+}
