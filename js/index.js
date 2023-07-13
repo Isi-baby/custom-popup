@@ -25,16 +25,20 @@ const customConfirm = (message) => {
     dialog.showModal()
 }
 
-const confirmOk = () => {
-    output.textContent = `
+const confirmOk = (message) => {
+    output.textContent = message ?? `
     Congratulations you have been redirected to the main page`
 }
 
 const customPrompt = () => {
     output.innerHTML = `
         <p>${'Enter your age'} </p>
-        <input type= text name=prompt>
+        <input type="text" id="inp"  name="prompt">
         <button onclick="cancelPopup()"> Cancel </button>
-        <button onclick="confirmOk()"> Ok </button>`
+        <button class="ok_btn"> Ok </button>`;
+    
+        document.querySelector('.ok_btn').onclick = () => {
+            confirmOk(`Age Entered is ${document.querySelector("#inp").value} Years old`);
+       }
      dialog.showModal()
 }
